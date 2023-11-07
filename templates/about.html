@@ -42,54 +42,23 @@
     <section class="team-members ">
         <div class="container">
             <div class="row">
-                <div class="title"><h2>Team Members</h2></div>
+                <div class="title"><h2>Члены команды</h2></div>
             </div>
             <div class="row">
+                {% for team in team_members %}
+                
                 <div class="col-md-3">
                     <div class="team-member text-center">
-                        <img class="img-circle" src="images/team/team-1.jpg">
-                        <h4>Jonathon Andrew</h4>
-                        <p>Founder</p>
+                        <img class="img-circle" src="{{ team.image.url }}">
+                        <h4>{{ team.full_name }}</h4>
+                        <p>{{ team.profession }}</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="team-member text-center">
-                        <img class="img-circle" src="images/team/team-2.jpg">
-                        <h4>Adipisci Velit</h4>
-                        <p>Developer</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="team-member text-center">
-                        <img class="img-circle" src="images/team/team-3.jpg">
-                        <h4>John Fexit</h4>
-                        <p>Shop Manager</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="team-member text-center">
-                        <img class="img-circle" src="images/team/team-1.jpg">
-                        <h4>John Fexit</h4>
-                        <p>Shop Manager</p>
-                    </div>
-                </div>
+
+                {% endfor %}
             </div>
         </div>
     </section>
-
-    <div class="section video-testimonial bg-1 overly-white text-center mt-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Video presentation</h2>
-                    <a class="play-icon" href="https://www.youtube.com/watch?v=oyEuk8j8imI&amp;rel=0" data-toggle="lightbox">
-                        <i class="tf-ion-ios-play"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     {% include "base/footer.html" %}
 
     <!-- 
