@@ -20,7 +20,7 @@
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="index.html">Home</a>
+						<a href="{% url "homepage" %}">Home</a>
 					</li><!-- / Home -->
 
 
@@ -52,7 +52,7 @@
 										<li class="dropdown-header">Layout</li>
 										<li role="separator" class="divider"></li>
 										<li><a href="product-single.html">Product Details</a></li>
-										<li><a href="shop-sidebar.html">Shop With Sidebar</a></li>
+										<li><a href="{% url "products_list" %}">Shop With Sidebar</a></li>
 
 									</ul>
 								</div>

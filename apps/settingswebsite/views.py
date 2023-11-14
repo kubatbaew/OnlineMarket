@@ -9,5 +9,5 @@ def homepage(request):
     category_1 = Category.objects.get(id=1)
     category_2 = Category.objects.get(id=2)
     category_3 = Category.objects.get(id=3)
-
+    
     return render(request, 'index.html', locals())
